@@ -115,15 +115,15 @@ body {
   position: absolute;
   background-color: white;
   top: -40px;
-  right: 10px;
+  right: 30px;
   color: black;
   padding: 10px;
-  border-radius: 1em;
+  border-radius: 0.3em;
   border-bottom-right-radius: 0;
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  max-width: 140px;
+  width: 140px;
 }
 
 .storage-left::after {
@@ -131,24 +131,34 @@ body {
   position: absolute;
   bottom: -20px;
   right: 0;
-  border-left: 2px solid white;
   height: 20px;
   width: 10px;
-  border: 1px solid black;
+  border: 1px solid white;
+  border-left: 5px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid white;
 }
 
-h2 {
-  margin-right: 10px;
-  font-size: 2rem;
+.storage-text {
+  font-size: 0.7rem;
 }
 
 span {
   color: hsl(229, 7%, 55%);
 }
 
+.storage-left {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+.storage-left span {
+  font-size: 0.6rem;
+  width: 100%;
+}
 @media (max-width: 613px) {
   body {
-    padding: 0 20px;
+    padding: 0 40px;
   }
   .container {
     flex-wrap: wrap;
@@ -157,12 +167,24 @@ span {
     top: 80%;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 1em !important;
+    border-radius: 0.3em !important;
   }
   .main-container,
   .storage-container {
     width: 100%;
     margin: 0;
     margin-bottom: 20px;
+  }
+  .storage-left::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    height: 20px;
+    width: 10px;
+    border: 1px solid transparent;
+    border-left: 5px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid transparent;
   }
 }
